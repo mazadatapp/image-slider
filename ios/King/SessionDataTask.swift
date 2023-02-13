@@ -28,11 +28,13 @@ import Foundation
 
 /// Represents a session data task in `ImageDownloader`. It consists of an underlying `URLSessionDataTask` and
 /// an array of `TaskCallback`. Multiple `TaskCallback`s could be added for a single downloading data task.
+@available(iOS 11.0, *)
 public class SessionDataTask {
 
     /// Represents the type of token which used for cancelling a task.
     public typealias CancelToken = Int
 
+    @available(iOS 11.0, *)
     struct TaskCallback {
         let onCompleted: Delegate<Result<ImageLoadingResult, KingfisherError>, Void>?
         let options: KingfisherParsedOptionsInfo

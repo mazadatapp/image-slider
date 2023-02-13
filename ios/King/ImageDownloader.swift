@@ -98,6 +98,7 @@ extension DownloadTask {
 }
 
 /// Represents a downloading manager for requesting the image with a URL from server.
+@available(iOS 11.0, *)
 open class ImageDownloader {
 
     // MARK: Singleton
@@ -452,6 +453,7 @@ open class ImageDownloader {
 }
 
 // MARK: Cancelling Task
+@available(iOS 11.0, *)
 extension ImageDownloader {
 
     /// Cancel all downloading tasks for this `ImageDownloader`. It will trigger the completion handlers
@@ -474,11 +476,14 @@ extension ImageDownloader {
 }
 
 // Use the default implementation from extension of `AuthenticationChallengeResponsible`.
+@available(iOS 11.0, *)
 extension ImageDownloader: AuthenticationChallengeResponsible {}
 
 // Use the default implementation from extension of `ImageDownloaderDelegate`.
+@available(iOS 11.0, *)
 extension ImageDownloader: ImageDownloaderDelegate {}
 
+@available(iOS 11.0, *)
 extension ImageDownloader {
     struct DownloadingContext {
         let url: URL

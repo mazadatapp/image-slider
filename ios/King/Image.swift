@@ -136,9 +136,13 @@ extension KingfisherWrapper where Base: KFCrossPlatformImage {
         // No need to do anything if already up
         guard base.imageOrientation != .up else { return base.copy() as! KFCrossPlatformImage }
 
-        return draw(to: size, inverting: true, refImage: KFCrossPlatformImage()) {
-            fixOrientation(in: $0)
-            return true
+        if #available(iOS 11.0, *) {
+            return draw(to: size, inverting: true, refImage: KFCrossPlatformImage()) {
+                fixOrientation(in: $0)
+                return true
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }
 

@@ -68,6 +68,7 @@ public enum CacheType {
 }
 
 /// Represents the caching operation result.
+@available(iOS 11.0, *)
 public struct CacheStoreResult {
     
     /// The cache result for memory cache. Caching an image to memory will never fail.
@@ -139,6 +140,7 @@ public enum ImageCacheResult {
 /// While a default image cache object will be used if you prefer the extension methods of Kingfisher, you can create
 /// your own cache object and configure its storages as your need. This class also provide an interface for you to set
 /// the memory and disk storage config.
+@available(iOS 11.0, *)
 open class ImageCache {
 
     // MARK: Singleton

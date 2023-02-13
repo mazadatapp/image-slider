@@ -27,6 +27,7 @@
 import Foundation
 
 // Represents the delegate object of downloader session. It also behave like a task manager for downloading.
+@available(iOS 11.0, *)
 @objc(KFSessionDelegate) // Fix for ObjC header name conflicting. https://github.com/onevcat/Kingfisher/issues/1530
 open class SessionDelegate: NSObject {
 
@@ -147,6 +148,7 @@ open class SessionDelegate: NSObject {
     }
 }
 
+@available(iOS 11.0, *)
 extension SessionDelegate: URLSessionDataDelegate {
 
     open func urlSession(

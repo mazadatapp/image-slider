@@ -7,8 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* ImageSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* ImageSlider.m */; };
-		F4FF95D7245B92E800C19C63 /*  ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  ImageSlider.swift */; };
+		50E1C79129993707007F1020 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C79029993707007F1020 /* ImageSliderView.swift */; };
+		50E1C793299938F3007F1020 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C792299938F3007F1020 /* ImageCell.swift */; };
+		50E1C899299A23F4007F1020 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C898299A23F4007F1020 /* UIImageViewExtension.swift */; };
+		50E1C8D8299A2474007F1020 /* ImageBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C89B299A2474007F1020 /* ImageBinder.swift */; };
+		50E1C8D9299A2474007F1020 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C89C299A2474007F1020 /* Storage.swift */; };
+		50E1C8DA299A2474007F1020 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C89D299A2474007F1020 /* ImageCache.swift */; };
+		50E1C8DB299A2474007F1020 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C89E299A2474007F1020 /* Source.swift */; };
+		50E1C8DC299A2474007F1020 /* KFImageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C89F299A2474007F1020 /* KFImageProtocol.swift */; };
+		50E1C8DD299A2474007F1020 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8A0299A2474007F1020 /* MemoryStorage.swift */; };
+		50E1C8DE299A2474007F1020 /* TVMonogramView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8A1299A2474007F1020 /* TVMonogramView+Kingfisher.swift */; };
+		50E1C8DF299A2474007F1020 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8A2299A2474007F1020 /* Kingfisher.swift */; };
+		50E1C8E0299A2474007F1020 /* KingfisherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8A3299A2474007F1020 /* KingfisherError.swift */; };
+		50E1C8E1299A2474007F1020 /* KFAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8A4299A2474007F1020 /* KFAnimatedImage.swift */; };
+		50E1C8E2299A2474007F1020 /* KF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8A5299A2474007F1020 /* KF.swift */; };
+		50E1C8E3299A2474007F1020 /* ImageProgressive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8A6299A2474007F1020 /* ImageProgressive.swift */; };
+		50E1C8E4299A2474007F1020 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8A7299A2474007F1020 /* Runtime.swift */; };
+		50E1C8E5299A2474007F1020 /* ImageDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8A8299A2474007F1020 /* ImageDownloaderDelegate.swift */; };
+		50E1C8E6299A2474007F1020 /* CallbackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8A9299A2474007F1020 /* CallbackQueue.swift */; };
+		50E1C8E7299A2474007F1020 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8AA299A2474007F1020 /* Delegate.swift */; };
+		50E1C8E8299A2474007F1020 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8AB299A2474007F1020 /* RequestModifier.swift */; };
+		50E1C8E9299A2474007F1020 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8AC299A2474007F1020 /* ExtensionHelpers.swift */; };
+		50E1C8EA299A2474007F1020 /* KFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8AD299A2474007F1020 /* KFImage.swift */; };
+		50E1C8EB299A2474007F1020 /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8AE299A2474007F1020 /* DiskStorage.swift */; };
+		50E1C8EC299A2474007F1020 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8AF299A2474007F1020 /* Result.swift */; };
+		50E1C8ED299A2474007F1020 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8B0299A2474007F1020 /* ImageView+Kingfisher.swift */; };
+		50E1C8EE299A2474007F1020 /* ImageDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8B1299A2474007F1020 /* ImageDataProcessor.swift */; };
+		50E1C8EF299A2474007F1020 /* NSButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8B2299A2474007F1020 /* NSButton+Kingfisher.swift */; };
+		50E1C8F0299A2474007F1020 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8B3299A2474007F1020 /* Image.swift */; };
+		50E1C8F1299A2474007F1020 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8B4299A2474007F1020 /* Indicator.swift */; };
+		50E1C8F2299A2474007F1020 /* ImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8B5299A2474007F1020 /* ImageFormat.swift */; };
+		50E1C8F3299A2474007F1020 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8B6299A2474007F1020 /* CacheSerializer.swift */; };
+		50E1C8F4299A2474007F1020 /* KFOptionsSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8B7299A2474007F1020 /* KFOptionsSetter.swift */; };
+		50E1C8F5299A2474007F1020 /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8B8299A2474007F1020 /* SessionDataTask.swift */; };
+		50E1C8F6299A2474007F1020 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8B9299A2474007F1020 /* UIButton+Kingfisher.swift */; };
+		50E1C8F7299A2474007F1020 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8BA299A2474007F1020 /* RedirectHandler.swift */; };
+		50E1C8F8299A2474007F1020 /* KFImageOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8BB299A2474007F1020 /* KFImageOptions.swift */; };
+		50E1C8F9299A2474007F1020 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8BC299A2474007F1020 /* Resource.swift */; };
+		50E1C8FA299A2474007F1020 /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8BD299A2474007F1020 /* ImageDataProvider.swift */; };
+		50E1C8FB299A2474007F1020 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8BE299A2474007F1020 /* ImageDownloader.swift */; };
+		50E1C8FC299A2474007F1020 /* AuthenticationChallengeResponsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8BF299A2474007F1020 /* AuthenticationChallengeResponsable.swift */; };
+		50E1C8FD299A2474007F1020 /* SizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8C0299A2474007F1020 /* SizeExtensions.swift */; };
+		50E1C8FE299A2474007F1020 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8C1299A2474007F1020 /* Box.swift */; };
+		50E1C8FF299A2474007F1020 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8C2299A2474007F1020 /* ImageModifier.swift */; };
+		50E1C900299A2474007F1020 /* WKInterfaceImage+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8C3299A2474007F1020 /* WKInterfaceImage+Kingfisher.swift */; };
+		50E1C901299A2474007F1020 /* ImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8C4299A2474007F1020 /* ImageDrawing.swift */; };
+		50E1C902299A2474007F1020 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8C5299A2474007F1020 /* KingfisherManager.swift */; };
+		50E1C903299A2474007F1020 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8C6299A2474007F1020 /* FormatIndicatedCacheSerializer.swift */; };
+		50E1C904299A2474007F1020 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8C7299A2474007F1020 /* ImageTransition.swift */; };
+		50E1C905299A2474007F1020 /* NSTextAttachment+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8C8299A2474007F1020 /* NSTextAttachment+Kingfisher.swift */; };
+		50E1C906299A2474007F1020 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8C9299A2474007F1020 /* AnimatedImageView.swift */; };
+		50E1C907299A2474007F1020 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8CA299A2474007F1020 /* String+MD5.swift */; };
+		50E1C908299A2474007F1020 /* ImageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8CB299A2474007F1020 /* ImageContext.swift */; };
+		50E1C909299A2474007F1020 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8CC299A2474007F1020 /* ImageProcessor.swift */; };
+		50E1C90A299A2474007F1020 /* GraphicsContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8CD299A2474007F1020 /* GraphicsContext.swift */; };
+		50E1C90B299A2474007F1020 /* RetryStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8CE299A2474007F1020 /* RetryStrategy.swift */; };
+		50E1C90C299A2474007F1020 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8CF299A2474007F1020 /* Filter.swift */; };
+		50E1C90D299A2474007F1020 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8D0299A2474007F1020 /* Placeholder.swift */; };
+		50E1C90E299A2474007F1020 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8D1299A2474007F1020 /* KingfisherOptionsInfo.swift */; };
+		50E1C90F299A2474007F1020 /* GIFAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8D2299A2474007F1020 /* GIFAnimatedImage.swift */; };
+		50E1C910299A2474007F1020 /* AVAssetImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8D3299A2474007F1020 /* AVAssetImageDataProvider.swift */; };
+		50E1C911299A2474007F1020 /* KFImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8D4299A2474007F1020 /* KFImageRenderer.swift */; };
+		50E1C912299A2474007F1020 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8D5299A2474007F1020 /* SessionDelegate.swift */; };
+		50E1C913299A2474007F1020 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8D6299A2474007F1020 /* ImagePrefetcher.swift */; };
+		50E1C914299A2474007F1020 /* CPListItem+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C8D7299A2474007F1020 /* CPListItem+Kingfisher.swift */; };
+		F4FF95D7245B92E800C19C63 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* ImageSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +88,70 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libImageSlider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libImageSlider.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		50E1C79029993707007F1020 /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
+		50E1C792299938F3007F1020 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		50E1C898299A23F4007F1020 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		50E1C89B299A2474007F1020 /* ImageBinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBinder.swift; sourceTree = "<group>"; };
+		50E1C89C299A2474007F1020 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		50E1C89D299A2474007F1020 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		50E1C89E299A2474007F1020 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		50E1C89F299A2474007F1020 /* KFImageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFImageProtocol.swift; sourceTree = "<group>"; };
+		50E1C8A0299A2474007F1020 /* MemoryStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		50E1C8A1299A2474007F1020 /* TVMonogramView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TVMonogramView+Kingfisher.swift"; sourceTree = "<group>"; };
+		50E1C8A2299A2474007F1020 /* Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kingfisher.swift; sourceTree = "<group>"; };
+		50E1C8A3299A2474007F1020 /* KingfisherError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherError.swift; sourceTree = "<group>"; };
+		50E1C8A4299A2474007F1020 /* KFAnimatedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFAnimatedImage.swift; sourceTree = "<group>"; };
+		50E1C8A5299A2474007F1020 /* KF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KF.swift; sourceTree = "<group>"; };
+		50E1C8A6299A2474007F1020 /* ImageProgressive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProgressive.swift; sourceTree = "<group>"; };
+		50E1C8A7299A2474007F1020 /* Runtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
+		50E1C8A8299A2474007F1020 /* ImageDownloaderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloaderDelegate.swift; sourceTree = "<group>"; };
+		50E1C8A9299A2474007F1020 /* CallbackQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackQueue.swift; sourceTree = "<group>"; };
+		50E1C8AA299A2474007F1020 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		50E1C8AB299A2474007F1020 /* RequestModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModifier.swift; sourceTree = "<group>"; };
+		50E1C8AC299A2474007F1020 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
+		50E1C8AD299A2474007F1020 /* KFImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFImage.swift; sourceTree = "<group>"; };
+		50E1C8AE299A2474007F1020 /* DiskStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskStorage.swift; sourceTree = "<group>"; };
+		50E1C8AF299A2474007F1020 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		50E1C8B0299A2474007F1020 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		50E1C8B1299A2474007F1020 /* ImageDataProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDataProcessor.swift; sourceTree = "<group>"; };
+		50E1C8B2299A2474007F1020 /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		50E1C8B3299A2474007F1020 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		50E1C8B4299A2474007F1020 /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
+		50E1C8B5299A2474007F1020 /* ImageFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFormat.swift; sourceTree = "<group>"; };
+		50E1C8B6299A2474007F1020 /* CacheSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheSerializer.swift; sourceTree = "<group>"; };
+		50E1C8B7299A2474007F1020 /* KFOptionsSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFOptionsSetter.swift; sourceTree = "<group>"; };
+		50E1C8B8299A2474007F1020 /* SessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataTask.swift; sourceTree = "<group>"; };
+		50E1C8B9299A2474007F1020 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		50E1C8BA299A2474007F1020 /* RedirectHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedirectHandler.swift; sourceTree = "<group>"; };
+		50E1C8BB299A2474007F1020 /* KFImageOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFImageOptions.swift; sourceTree = "<group>"; };
+		50E1C8BC299A2474007F1020 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		50E1C8BD299A2474007F1020 /* ImageDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDataProvider.swift; sourceTree = "<group>"; };
+		50E1C8BE299A2474007F1020 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		50E1C8BF299A2474007F1020 /* AuthenticationChallengeResponsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationChallengeResponsable.swift; sourceTree = "<group>"; };
+		50E1C8C0299A2474007F1020 /* SizeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeExtensions.swift; sourceTree = "<group>"; };
+		50E1C8C1299A2474007F1020 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		50E1C8C2299A2474007F1020 /* ImageModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModifier.swift; sourceTree = "<group>"; };
+		50E1C8C3299A2474007F1020 /* WKInterfaceImage+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKInterfaceImage+Kingfisher.swift"; sourceTree = "<group>"; };
+		50E1C8C4299A2474007F1020 /* ImageDrawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDrawing.swift; sourceTree = "<group>"; };
+		50E1C8C5299A2474007F1020 /* KingfisherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherManager.swift; sourceTree = "<group>"; };
+		50E1C8C6299A2474007F1020 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
+		50E1C8C7299A2474007F1020 /* ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
+		50E1C8C8299A2474007F1020 /* NSTextAttachment+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment+Kingfisher.swift"; sourceTree = "<group>"; };
+		50E1C8C9299A2474007F1020 /* AnimatedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
+		50E1C8CA299A2474007F1020 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		50E1C8CB299A2474007F1020 /* ImageContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageContext.swift; sourceTree = "<group>"; };
+		50E1C8CC299A2474007F1020 /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		50E1C8CD299A2474007F1020 /* GraphicsContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphicsContext.swift; sourceTree = "<group>"; };
+		50E1C8CE299A2474007F1020 /* RetryStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetryStrategy.swift; sourceTree = "<group>"; };
+		50E1C8CF299A2474007F1020 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		50E1C8D0299A2474007F1020 /* Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		50E1C8D1299A2474007F1020 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		50E1C8D2299A2474007F1020 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFAnimatedImage.swift; sourceTree = "<group>"; };
+		50E1C8D3299A2474007F1020 /* AVAssetImageDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetImageDataProvider.swift; sourceTree = "<group>"; };
+		50E1C8D4299A2474007F1020 /* KFImageRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFImageRenderer.swift; sourceTree = "<group>"; };
+		50E1C8D5299A2474007F1020 /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		50E1C8D6299A2474007F1020 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePrefetcher.swift; sourceTree = "<group>"; };
+		50E1C8D7299A2474007F1020 /* CPListItem+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CPListItem+Kingfisher.swift"; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* ImageSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSlider.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* ImageSlider-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageSlider-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
@@ -49,9 +176,89 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		50E1C897299A23DC007F1020 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				50E1C898299A23F4007F1020 /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		50E1C89A299A2474007F1020 /* King */ = {
+			isa = PBXGroup;
+			children = (
+				50E1C89B299A2474007F1020 /* ImageBinder.swift */,
+				50E1C89C299A2474007F1020 /* Storage.swift */,
+				50E1C89D299A2474007F1020 /* ImageCache.swift */,
+				50E1C89E299A2474007F1020 /* Source.swift */,
+				50E1C89F299A2474007F1020 /* KFImageProtocol.swift */,
+				50E1C8A0299A2474007F1020 /* MemoryStorage.swift */,
+				50E1C8A1299A2474007F1020 /* TVMonogramView+Kingfisher.swift */,
+				50E1C8A2299A2474007F1020 /* Kingfisher.swift */,
+				50E1C8A3299A2474007F1020 /* KingfisherError.swift */,
+				50E1C8A4299A2474007F1020 /* KFAnimatedImage.swift */,
+				50E1C8A5299A2474007F1020 /* KF.swift */,
+				50E1C8A6299A2474007F1020 /* ImageProgressive.swift */,
+				50E1C8A7299A2474007F1020 /* Runtime.swift */,
+				50E1C8A8299A2474007F1020 /* ImageDownloaderDelegate.swift */,
+				50E1C8A9299A2474007F1020 /* CallbackQueue.swift */,
+				50E1C8AA299A2474007F1020 /* Delegate.swift */,
+				50E1C8AB299A2474007F1020 /* RequestModifier.swift */,
+				50E1C8AC299A2474007F1020 /* ExtensionHelpers.swift */,
+				50E1C8AD299A2474007F1020 /* KFImage.swift */,
+				50E1C8AE299A2474007F1020 /* DiskStorage.swift */,
+				50E1C8AF299A2474007F1020 /* Result.swift */,
+				50E1C8B0299A2474007F1020 /* ImageView+Kingfisher.swift */,
+				50E1C8B1299A2474007F1020 /* ImageDataProcessor.swift */,
+				50E1C8B2299A2474007F1020 /* NSButton+Kingfisher.swift */,
+				50E1C8B3299A2474007F1020 /* Image.swift */,
+				50E1C8B4299A2474007F1020 /* Indicator.swift */,
+				50E1C8B5299A2474007F1020 /* ImageFormat.swift */,
+				50E1C8B6299A2474007F1020 /* CacheSerializer.swift */,
+				50E1C8B7299A2474007F1020 /* KFOptionsSetter.swift */,
+				50E1C8B8299A2474007F1020 /* SessionDataTask.swift */,
+				50E1C8B9299A2474007F1020 /* UIButton+Kingfisher.swift */,
+				50E1C8BA299A2474007F1020 /* RedirectHandler.swift */,
+				50E1C8BB299A2474007F1020 /* KFImageOptions.swift */,
+				50E1C8BC299A2474007F1020 /* Resource.swift */,
+				50E1C8BD299A2474007F1020 /* ImageDataProvider.swift */,
+				50E1C8BE299A2474007F1020 /* ImageDownloader.swift */,
+				50E1C8BF299A2474007F1020 /* AuthenticationChallengeResponsable.swift */,
+				50E1C8C0299A2474007F1020 /* SizeExtensions.swift */,
+				50E1C8C1299A2474007F1020 /* Box.swift */,
+				50E1C8C2299A2474007F1020 /* ImageModifier.swift */,
+				50E1C8C3299A2474007F1020 /* WKInterfaceImage+Kingfisher.swift */,
+				50E1C8C4299A2474007F1020 /* ImageDrawing.swift */,
+				50E1C8C5299A2474007F1020 /* KingfisherManager.swift */,
+				50E1C8C6299A2474007F1020 /* FormatIndicatedCacheSerializer.swift */,
+				50E1C8C7299A2474007F1020 /* ImageTransition.swift */,
+				50E1C8C8299A2474007F1020 /* NSTextAttachment+Kingfisher.swift */,
+				50E1C8C9299A2474007F1020 /* AnimatedImageView.swift */,
+				50E1C8CA299A2474007F1020 /* String+MD5.swift */,
+				50E1C8CB299A2474007F1020 /* ImageContext.swift */,
+				50E1C8CC299A2474007F1020 /* ImageProcessor.swift */,
+				50E1C8CD299A2474007F1020 /* GraphicsContext.swift */,
+				50E1C8CE299A2474007F1020 /* RetryStrategy.swift */,
+				50E1C8CF299A2474007F1020 /* Filter.swift */,
+				50E1C8D0299A2474007F1020 /* Placeholder.swift */,
+				50E1C8D1299A2474007F1020 /* KingfisherOptionsInfo.swift */,
+				50E1C8D2299A2474007F1020 /* GIFAnimatedImage.swift */,
+				50E1C8D3299A2474007F1020 /* AVAssetImageDataProvider.swift */,
+				50E1C8D4299A2474007F1020 /* KFImageRenderer.swift */,
+				50E1C8D5299A2474007F1020 /* SessionDelegate.swift */,
+				50E1C8D6299A2474007F1020 /* ImagePrefetcher.swift */,
+				50E1C8D7299A2474007F1020 /* CPListItem+Kingfisher.swift */,
+			);
+			path = King;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				50E1C89A299A2474007F1020 /* King */,
+				50E1C897299A23DC007F1020 /* Extensions */,
+				50E1C792299938F3007F1020 /* ImageCell.swift */,
+				50E1C79029993707007F1020 /* ImageSliderView.swift */,
 				F4FF95D6245B92E800C19C63 /* ImageSlider.swift */,
 				B3E7B5891CC2AC0600A0062D /* ImageSlider.m */,
 				F4FF95D5245B92E700C19C63 /* ImageSlider-Bridging-Header.h */,
@@ -116,8 +323,71 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E1C8E6299A2474007F1020 /* CallbackQueue.swift in Sources */,
+				50E1C8F8299A2474007F1020 /* KFImageOptions.swift in Sources */,
+				50E1C8DB299A2474007F1020 /* Source.swift in Sources */,
+				50E1C8D8299A2474007F1020 /* ImageBinder.swift in Sources */,
+				50E1C901299A2474007F1020 /* ImageDrawing.swift in Sources */,
+				50E1C8FF299A2474007F1020 /* ImageModifier.swift in Sources */,
+				50E1C8F5299A2474007F1020 /* SessionDataTask.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* ImageSlider.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* ImageSlider.m in Sources */,
+				50E1C8F0299A2474007F1020 /* Image.swift in Sources */,
+				50E1C8EA299A2474007F1020 /* KFImage.swift in Sources */,
+				50E1C8DE299A2474007F1020 /* TVMonogramView+Kingfisher.swift in Sources */,
+				50E1C8EC299A2474007F1020 /* Result.swift in Sources */,
+				50E1C8F2299A2474007F1020 /* ImageFormat.swift in Sources */,
+				50E1C90C299A2474007F1020 /* Filter.swift in Sources */,
+				50E1C8FA299A2474007F1020 /* ImageDataProvider.swift in Sources */,
+				50E1C79129993707007F1020 /* ImageSliderView.swift in Sources */,
+				50E1C8E5299A2474007F1020 /* ImageDownloaderDelegate.swift in Sources */,
+				50E1C905299A2474007F1020 /* NSTextAttachment+Kingfisher.swift in Sources */,
+				50E1C8E1299A2474007F1020 /* KFAnimatedImage.swift in Sources */,
+				50E1C8ED299A2474007F1020 /* ImageView+Kingfisher.swift in Sources */,
+				50E1C914299A2474007F1020 /* CPListItem+Kingfisher.swift in Sources */,
+				50E1C8E0299A2474007F1020 /* KingfisherError.swift in Sources */,
+				50E1C8F1299A2474007F1020 /* Indicator.swift in Sources */,
+				50E1C8FD299A2474007F1020 /* SizeExtensions.swift in Sources */,
+				50E1C900299A2474007F1020 /* WKInterfaceImage+Kingfisher.swift in Sources */,
+				50E1C906299A2474007F1020 /* AnimatedImageView.swift in Sources */,
+				50E1C8E8299A2474007F1020 /* RequestModifier.swift in Sources */,
+				50E1C8DD299A2474007F1020 /* MemoryStorage.swift in Sources */,
+				50E1C913299A2474007F1020 /* ImagePrefetcher.swift in Sources */,
+				50E1C8E2299A2474007F1020 /* KF.swift in Sources */,
+				50E1C8F4299A2474007F1020 /* KFOptionsSetter.swift in Sources */,
+				50E1C909299A2474007F1020 /* ImageProcessor.swift in Sources */,
+				50E1C8FE299A2474007F1020 /* Box.swift in Sources */,
+				50E1C899299A23F4007F1020 /* UIImageViewExtension.swift in Sources */,
+				50E1C793299938F3007F1020 /* ImageCell.swift in Sources */,
+				50E1C904299A2474007F1020 /* ImageTransition.swift in Sources */,
+				50E1C8E4299A2474007F1020 /* Runtime.swift in Sources */,
+				50E1C8DA299A2474007F1020 /* ImageCache.swift in Sources */,
+				50E1C90A299A2474007F1020 /* GraphicsContext.swift in Sources */,
+				50E1C8FB299A2474007F1020 /* ImageDownloader.swift in Sources */,
+				50E1C8F7299A2474007F1020 /* RedirectHandler.swift in Sources */,
+				50E1C8DF299A2474007F1020 /* Kingfisher.swift in Sources */,
+				50E1C8E7299A2474007F1020 /* Delegate.swift in Sources */,
+				50E1C8E3299A2474007F1020 /* ImageProgressive.swift in Sources */,
+				50E1C907299A2474007F1020 /* String+MD5.swift in Sources */,
+				50E1C8EB299A2474007F1020 /* DiskStorage.swift in Sources */,
+				50E1C8FC299A2474007F1020 /* AuthenticationChallengeResponsable.swift in Sources */,
+				50E1C902299A2474007F1020 /* KingfisherManager.swift in Sources */,
+				50E1C8E9299A2474007F1020 /* ExtensionHelpers.swift in Sources */,
+				50E1C90D299A2474007F1020 /* Placeholder.swift in Sources */,
+				50E1C912299A2474007F1020 /* SessionDelegate.swift in Sources */,
+				50E1C8F9299A2474007F1020 /* Resource.swift in Sources */,
+				50E1C8D9299A2474007F1020 /* Storage.swift in Sources */,
+				50E1C8F6299A2474007F1020 /* UIButton+Kingfisher.swift in Sources */,
+				50E1C911299A2474007F1020 /* KFImageRenderer.swift in Sources */,
+				50E1C90E299A2474007F1020 /* KingfisherOptionsInfo.swift in Sources */,
+				50E1C903299A2474007F1020 /* FormatIndicatedCacheSerializer.swift in Sources */,
+				50E1C90F299A2474007F1020 /* GIFAnimatedImage.swift in Sources */,
+				50E1C910299A2474007F1020 /* AVAssetImageDataProvider.swift in Sources */,
+				50E1C8EE299A2474007F1020 /* ImageDataProcessor.swift in Sources */,
+				50E1C8EF299A2474007F1020 /* NSButton+Kingfisher.swift in Sources */,
+				50E1C908299A2474007F1020 /* ImageContext.swift in Sources */,
+				50E1C8F3299A2474007F1020 /* CacheSerializer.swift in Sources */,
+				50E1C8DC299A2474007F1020 /* KFImageProtocol.swift in Sources */,
+				50E1C90B299A2474007F1020 /* RetryStrategy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -212,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

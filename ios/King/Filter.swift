@@ -40,6 +40,7 @@ public protocol CIImageProcessor: ImageProcessor {
     var filter: Filter { get }
 }
 
+@available(iOS 11.0, *)
 extension CIImageProcessor {
     
     /// Processes the input `ImageProcessItem` with this processor.

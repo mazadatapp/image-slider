@@ -29,6 +29,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@available(iOS 11.0, *)
 extension KingfisherWrapper where Base: UIButton {
 
     // MARK: Setting Image
