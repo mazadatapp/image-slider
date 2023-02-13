@@ -79,7 +79,6 @@ extension KFOptionSetter {
 }
 
 // MARK: - Basic options settings.
-@available(iOS 11.0, *)
 extension KFOptionSetter {
     /// Sets the target image cache for this task.
     /// - Parameter cache: The target cache is about to be used for the task.

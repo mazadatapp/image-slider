@@ -32,7 +32,6 @@ extension Never {}
 /// Kingfisher related methods always throw a `KingfisherError` or invoke the callback with `KingfisherError`
 /// as its error type. To handle errors from Kingfisher, you switch over the error to get a reason catalog,
 /// then switch over the reason to know error detail.
-@available(iOS 11.0, *)
 public enum KingfisherError: Error {
 
     // MARK: Error Reason Types
@@ -42,7 +41,6 @@ public enum KingfisherError: Error {
     /// - emptyRequest: The request is empty. Code 1001.
     /// - invalidURL: The URL of request is invalid. Code 1002.
     /// - taskCancelled: The downloading task is cancelled by user. Code 1003.
-    @available(iOS 11.0, *)
     public enum RequestErrorReason {
         
         /// The request is empty. Code 1001.
@@ -65,7 +63,6 @@ public enum KingfisherError: Error {
     /// - URLSessionError: An error happens in the system URL session. Code 2003.
     /// - dataModifyingFailed: Data modifying fails on returning a valid data. Code 2004.
     /// - noURLResponse: The task is done but no URL response found. Code 2005.
-    @available(iOS 11.0, *)
     public enum ResponseErrorReason {
         
         /// The response is not a valid URL response. Code 2001.
@@ -282,7 +279,6 @@ public enum KingfisherError: Error {
 }
 
 // MARK: - LocalizedError Conforming
-@available(iOS 11.0, *)
 extension KingfisherError: LocalizedError {
     
     /// A localized message describing what error occurred.
@@ -299,7 +295,6 @@ extension KingfisherError: LocalizedError {
 
 
 // MARK: - CustomNSError Conforming
-@available(iOS 11.0, *)
 extension KingfisherError: CustomNSError {
 
     /// The error domain of `KingfisherError`. All errors from Kingfisher is under this domain.
@@ -317,7 +312,6 @@ extension KingfisherError: CustomNSError {
     }
 }
 
-@available(iOS 11.0, *)
 extension KingfisherError.RequestErrorReason {
     var errorDescription: String? {
         switch self {
@@ -339,7 +333,6 @@ extension KingfisherError.RequestErrorReason {
     }
 }
 
-@available(iOS 11.0, *)
 extension KingfisherError.ResponseErrorReason {
     var errorDescription: String? {
         switch self {
@@ -367,7 +360,6 @@ extension KingfisherError.ResponseErrorReason {
     }
 }
 
-@available(iOS 11.0, *)
 extension KingfisherError.CacheErrorReason {
     var errorDescription: String? {
         switch self {
@@ -421,7 +413,6 @@ extension KingfisherError.CacheErrorReason {
     }
 }
 
-@available(iOS 11.0, *)
 extension KingfisherError.ProcessorErrorReason {
     var errorDescription: String? {
         switch self {
@@ -437,7 +428,6 @@ extension KingfisherError.ProcessorErrorReason {
     }
 }
 
-@available(iOS 11.0, *)
 extension KingfisherError.ImageSettingErrorReason {
     var errorDescription: String? {
         switch self {

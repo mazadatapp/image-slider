@@ -9,15 +9,12 @@
 import UIKit
 
 class ImageCell: UICollectionViewCell {
-    var image_:UIImageView!
+    var image_:ImageScrollView!
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        image_=UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
-        print(frame.size)
-        image_.layer.cornerRadius = 8
-        image_.backgroundColor = .blue
+        image_=ImageScrollView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
         contentView.addSubview(image_)
         
         

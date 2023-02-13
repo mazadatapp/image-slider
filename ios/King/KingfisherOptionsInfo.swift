@@ -33,17 +33,13 @@ import UIKit
 
 /// KingfisherOptionsInfo is a typealias for [KingfisherOptionsInfoItem].
 /// You can use the enum of option item with value to control some behaviors of Kingfisher.
-
-@available(iOS 11.0, *)
 public typealias KingfisherOptionsInfo = [KingfisherOptionsInfoItem]
 
-@available(iOS 11.0, *)
 extension Array where Element == KingfisherOptionsInfoItem {
     static let empty: KingfisherOptionsInfo = []
 }
 
 /// Represents the available option items could be used in `KingfisherOptionsInfo`.
-@available(iOS 11.0, *)
 public enum KingfisherOptionsInfoItem {
     
     /// Kingfisher will use the associated `ImageCache` object when handling related operations,
@@ -273,7 +269,6 @@ public enum KingfisherOptionsInfoItem {
 /// The parsed options info used across Kingfisher methods. Each property in this type corresponds a case member
 /// in `KingfisherOptionsInfoItem`. When a `KingfisherOptionsInfo` sent to Kingfisher related methods, it will be
 /// parsed and converted to a `KingfisherParsedOptionsInfo` first, and pass through the internal methods.
-@available(iOS 11.0, *)
 public struct KingfisherParsedOptionsInfo {
 
     public var targetCache: ImageCache? = nil
@@ -364,7 +359,6 @@ public struct KingfisherParsedOptionsInfo {
     }
 }
 
-@available(iOS 11.0, *)
 extension KingfisherParsedOptionsInfo {
     var imageCreatingOptions: ImageCreatingOptions {
         return ImageCreatingOptions(
@@ -375,12 +369,10 @@ extension KingfisherParsedOptionsInfo {
     }
 }
 
-@available(iOS 11.0, *)
 protocol DataReceivingSideEffect: AnyObject {
     var onShouldApply: () -> Bool { get set }
     func onDataReceived(_ session: URLSession, task: SessionDataTask, data: Data)
 }
-@available(iOS 11.0, *)
 
 class ImageLoadingProgressSideEffect: DataReceivingSideEffect {
 

@@ -64,7 +64,6 @@ public struct RetrieveImageResult {
 
 /// A struct that stores some related information of an `KingfisherError`. It provides some context information for
 /// a pure error so you can identify the error easier.
-@available(iOS 11.0, *)
 public struct PropagationError {
 
     /// The `Source` to which current `error` is bound.
@@ -83,8 +82,6 @@ public typealias DownloadTaskUpdatedBlock = ((_ newTask: DownloadTask?) -> Void)
 /// Main manager class of Kingfisher. It connects Kingfisher downloader and cache,
 /// to provide a set of convenience methods to use Kingfisher for tasks.
 /// You can use this class to retrieve an image via a specified URL from web or cache.
-@available(iOS 11.0, *)
-@available(iOS 11.0, *)
 public class KingfisherManager {
 
     /// Represents a shared manager used across Kingfisher.
@@ -706,7 +703,6 @@ public class KingfisherManager {
     }
 }
 
-@available(iOS 11.0, *)
 class RetrievingContext {
 
     var options: KingfisherParsedOptionsInfo

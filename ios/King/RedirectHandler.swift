@@ -27,7 +27,6 @@
 import Foundation
 
 /// Represents and wraps a method for modifying request during an image download request redirection.
-@available(iOS 11.0, *)
 public protocol ImageDownloadRedirectHandler {
 
     /// The `ImageDownloadRedirectHandler` contained will be used to change the request before redirection.
@@ -54,7 +53,6 @@ public protocol ImageDownloadRedirectHandler {
 
 /// A wrapper for creating an `ImageDownloadRedirectHandler` easier.
 /// This type conforms to `ImageDownloadRedirectHandler` and wraps a redirect request modify block.
-@available(iOS 11.0, *)
 public struct AnyRedirectHandler: ImageDownloadRedirectHandler {
     
     let block: (SessionDataTask, HTTPURLResponse, URLRequest, @escaping (URLRequest?) -> Void) -> Void

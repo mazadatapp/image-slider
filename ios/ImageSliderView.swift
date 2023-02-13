@@ -29,18 +29,24 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
         }
     }
     
+    @objc var onChange: RCTBubblingEventBlock?
+    
     override func draw(_ rect: CGRect) {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         collection=UICollectionView(frame: rect, collectionViewLayout: layout)
+        collection.backgroundColor = .clear
         collection.register(ImageCell.self, forCellWithReuseIdentifier: "ImageCell")
         collection.delegate = self
         collection.dataSource = self
         
         collection.isPagingEnabled = true
         addSubview(collection)
+        
+        sendEvent(index: 0)
+        
     }
     
     func hexStringToUIColor(hexColor: String) -> UIColor {
@@ -65,13 +71,23 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
-        cell.backgroundColor = .black
-        let url = URL(string: list[indexPath.row] as String)
-        cell.image_.kf.setImage(with: url)
+        cell.image_.collection = collection
+        cell.image_.display(url: list[indexPath.row] as String)
+       
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collection.frame.width, height: collection.frame.height)
-        }
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        sendEvent(index: collection.indexPathsForVisibleItems.first![1])
+    }
+    
+    func sendEvent(index:Int){
+        let event = ["data":index]
+        onChange!(event)
+    }
 }

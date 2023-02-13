@@ -52,7 +52,6 @@ import CoreGraphics
 /// // Otherwise, the corner part would be filled by white color (since JPEG does not contain an alpha channel).
 /// imageView.kf.setImage(with: url, options: optionsInfo)
 /// ````
-@available(iOS 11.0, *)
 public struct FormatIndicatedCacheSerializer: CacheSerializer {
     
     /// A `FormatIndicatedCacheSerializer` which converts image from and to PNG format. If the image cannot be

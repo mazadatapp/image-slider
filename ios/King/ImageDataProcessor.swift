@@ -30,7 +30,6 @@ private let sharedProcessingQueue: CallbackQueue =
     .dispatch(DispatchQueue(label: "com.onevcat.Kingfisher.ImageDownloader.Process"))
 
 // Handles image processing work on an own process queue.
-@available(iOS 11.0, *)
 class ImageDataProcessor {
     let data: Data
     let callbacks: [SessionDataTask.TaskCallback]

@@ -46,7 +46,6 @@ import TVUIKit
 
 /// A helper type to create image setting tasks in a builder pattern.
 /// Use methods in this type to create a `KF.Builder` instance and configure image tasks there.
-@available(iOS 11.0, *)
 public enum KF {
 
     /// Creates a builder for a given `Source`.
@@ -100,11 +99,9 @@ public enum KF {
 }
 
 
-@available(iOS 11.0, *)
 extension KF {
 
     /// A builder class to configure an image retrieving task and set it to a holder view or component.
-    @available(iOS 11.0, *)
     public class Builder {
         private let source: Source?
 
@@ -141,7 +138,6 @@ extension KF {
     }
 }
 
-@available(iOS 11.0, *)
 extension KF.Builder {
     #if !os(watchOS)
 
@@ -316,7 +312,6 @@ extension KF.Builder {
 }
 
 #if !os(watchOS)
-@available(iOS 11.0, *)
 extension KF.Builder {
     #if os(iOS) || os(tvOS)
 
@@ -339,7 +334,6 @@ extension KF.Builder {
 }
 #endif
 
-@available(iOS 11.0, *)
 extension KF.Builder {
 
     #if os(iOS) || os(tvOS)
@@ -407,7 +401,6 @@ extension KF.Builder {
 }
 
 // MARK: - Deprecated
-@available(iOS 11.0, *)
 extension KF.Builder {
     /// Starts the loading process of `self` immediately.
     ///
@@ -427,7 +420,6 @@ extension KF.Builder {
 }
 
 // MARK: - Redirect Handler
-@available(iOS 11.0, *)
 extension KF {
 
     /// Represents the detail information when a task redirect happens. It is wrapping necessary information for a

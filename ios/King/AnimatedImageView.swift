@@ -37,7 +37,6 @@ import UIKit
 import ImageIO
 
 /// Protocol of `AnimatedImageView`.
-@available(iOS 11.0, *)
 public protocol AnimatedImageViewDelegate: AnyObject {
 
     /// Called after the animatedImageView has finished each animation loop.
@@ -53,7 +52,6 @@ public protocol AnimatedImageViewDelegate: AnyObject {
     func animatedImageViewDidFinishAnimating(_ imageView: AnimatedImageView)
 }
 
-@available(iOS 11.0, *)
 extension AnimatedImageViewDelegate {
     public func animatedImageView(_ imageView: AnimatedImageView, didPlayAnimationLoops count: UInt) {}
     public func animatedImageViewDidFinishAnimating(_ imageView: AnimatedImageView) {}
@@ -69,7 +67,6 @@ let KFRunLoopModeCommon = RunLoop.Mode.common
 ///
 /// Kingfisher supports setting GIF animated data to either `UIImageView` and `AnimatedImageView` out of box. So
 /// it would be fairly easy to switch between them.
-@available(iOS 11.0, *)
 open class AnimatedImageView: UIImageView {
     /// Proxy object for preventing a reference cycle between the `CADDisplayLink` and `AnimatedImageView`.
     class TargetProxy {
@@ -316,19 +313,16 @@ open class AnimatedImageView: UIImageView {
     }
 }
 
-@available(iOS 11.0, *)
 protocol AnimatorDelegate: AnyObject {
     func animator(_ animator: AnimatedImageView.Animator, didPlayAnimationLoops count: UInt)
 }
 
-@available(iOS 11.0, *)
 extension AnimatedImageView: AnimatorDelegate {
     func animator(_ animator: Animator, didPlayAnimationLoops count: UInt) {
         delegate?.animatedImageView(self, didPlayAnimationLoops: count)
     }
 }
 
-@available(iOS 11.0, *)
 extension AnimatedImageView {
 
     // Represents a single frame in a GIF.
@@ -361,13 +355,11 @@ extension AnimatedImageView {
     }
 }
 
-@available(iOS 11.0, *)
 extension AnimatedImageView {
 
     // MARK: - Animator
 
     /// An animator which used to drive the data behind `AnimatedImageView`.
-    @available(iOS 11.0, *)
     public class Animator {
         private let size: CGSize
 

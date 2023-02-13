@@ -34,7 +34,6 @@ import UIKit
 #endif
 
 // MARK: - Image Transforming
-@available(iOS 11.0, *)
 extension KingfisherWrapper where Base: KFCrossPlatformImage {
     // MARK: Blend Mode
     /// Create image from `base` image and apply blend mode.
@@ -493,7 +492,6 @@ extension KingfisherWrapper where Base: KFCrossPlatformImage {
 }
 
 // MARK: - Decoding Image
-@available(iOS 11.0, *)
 extension KingfisherWrapper where Base: KFCrossPlatformImage {
     
     /// Returns the decoded image of the `base` image. It will draw the image in a plain context and return the data
@@ -571,7 +569,6 @@ extension CGImage {
     }
 }
 
-@available(iOS 11.0, *)
 extension KingfisherWrapper where Base: KFCrossPlatformImage {
     func draw(
         to size: CGSize,

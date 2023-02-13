@@ -32,7 +32,6 @@ import AppKit
 import UIKit
 #endif
 
-@available(iOS 11.0, *)
 extension KingfisherWrapper where Base: NSTextAttachment {
 
     // MARK: Setting Image

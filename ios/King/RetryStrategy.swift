@@ -27,7 +27,6 @@
 import Foundation
 
 /// Represents a retry context which could be used to determine the current retry status.
-@available(iOS 11.0, *)
 public class RetryContext {
 
     /// The source from which the target image should be retrieved.
@@ -66,7 +65,6 @@ public enum RetryDecision {
 }
 
 /// Defines a retry strategy can be applied to a `.retryStrategy` option.
-@available(iOS 11.0, *)
 public protocol RetryStrategy {
 
     /// Kingfisher calls this method if an error happens during the image retrieving process from a `KingfisherManager`.
@@ -81,7 +79,6 @@ public protocol RetryStrategy {
 
 /// A retry strategy that guides Kingfisher to retry when a `.responseError` happens, with a specified max retry count
 /// and a certain interval mechanism.
-@available(iOS 11.0, *)
 public struct DelayRetryStrategy: RetryStrategy {
 
     /// Represents the interval mechanism which used in a `DelayRetryStrategy`.
