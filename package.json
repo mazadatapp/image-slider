@@ -1,6 +1,6 @@
 {
   "name": "mazadat-image-slider",
-  "version": "0.6.0",
+  "version": "0.8.0",
   "description": "test",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -40,13 +40,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/karimmazadat/image-slider",
-  "author": "karimmazadat <karim.saad@mazad.at> (https://github.com/karimmazadat)",
-  "license": "MIT",
+  "repository": "https://github.com/mazadatapp/image-slider",
+  "author": "karimmazadat <karim.saad@mazad.at> (https://github.com/mazadatapp)",
+  "license": "MAZADAT",
   "bugs": {
-    "url": "https://github.com/karimmazadat/image-slider/issues"
+    "url": "https://github.com/mazadatapp/image-slider/issues"
   },
-  "homepage": "https://github.com/karimmazadat/image-slider#readme",
+  "homepage": "https://github.com/mazadatapp/image-slider#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

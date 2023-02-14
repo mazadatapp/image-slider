@@ -23,9 +23,11 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
     
     @objc var data: [NSString] = [] {
         didSet {
-            print(data[0])
+            list.removeAll()
             list.append(contentsOf: data)
-            //collection.reloadData()
+            if(collection != nil){
+                collection.reloadData()
+            }
         }
     }
     
