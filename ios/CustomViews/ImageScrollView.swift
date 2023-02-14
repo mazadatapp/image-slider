@@ -29,7 +29,7 @@ open class ImageScrollView: UIScrollView {
     
     static let kZoomInFactorFromMinWhenDoubleTap: CGFloat = 2
     
-    @objc open var imageContentMode: ScaleMode = .widthFill
+    @objc open var imageContentMode: ScaleMode = .aspectFit
     @objc open var initialOffset: Offset = .begining
     
     @objc public private(set) var zoomView: UIImageView? = nil
@@ -358,7 +358,7 @@ extension ImageScrollView: UIScrollViewDelegate {
     public func scrollViewDidZoom(_ scrollView: UIScrollView) {
         adjustFrameToCenter()
         imageScrollViewDelegate?.scrollViewDidZoom?(scrollView)
-        collection.isScrollEnabled = (zoomScale<0.4)
+        collection.isScrollEnabled = (zoomScale<0.5)
         
     }
     
