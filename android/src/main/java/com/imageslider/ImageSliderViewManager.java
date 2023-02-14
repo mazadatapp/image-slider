@@ -71,7 +71,7 @@ public class ImageSliderViewManager extends SimpleViewManager<RecyclerView> {
 
   @ReactProp(name = "data")
   public void setData(RecyclerView recyclerView, ReadableArray data) {
-
+    images.clear();
     for (int i = 0; i < data.size(); i++) {
       images.addLast(data.getString(i));
     }

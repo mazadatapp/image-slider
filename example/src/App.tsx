@@ -16,7 +16,6 @@ const [array,setArray] = useState(['https://imgs.search.brave.com/QvTo_4uwbiM9g4
 
 const appendOnImageList = () => {
   setArray(oldArray => [...oldArray,'https://imgs.search.brave.com/IV8DqnaLPaTbwKAjxX_VNLcKwtE4pUil4S_gZ68GBR4/rs:fit:1200:1200:1/g:ce/aHR0cDovL3dhbGx1/cC5uZXQvd3AtY29u/dGVudC91cGxvYWRz/LzIwMTYvMDMvMTIv/MzQxNzYyLUF1ZGlf/UjgtY2FyLXZlaGlj/bGUtU3VwZXJfQ2Fy/LXJlZF9jYXJzLmpw/Zw'] )
-  console.log({array: array?.length})
 }
 
   return (
