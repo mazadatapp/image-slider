@@ -44,6 +44,9 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
         collection.delegate = self
         collection.dataSource = self
         
+        collection.showsHorizontalScrollIndicator = false
+        collection.showsVerticalScrollIndicator = false
+        
         collection.isPagingEnabled = true
         addSubview(collection)
         

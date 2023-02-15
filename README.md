@@ -24,6 +24,11 @@ const onItemSelected = event => {
         color="#000000"
         style={styles.box} />
 
+#Features
+* pinch to zoom
+* double click to zoom in/out by 2x
+* the scroll is disabled when zooming in
+
 ```
 
 ## Contributing
