@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ImageCell: UICollectionViewCell {
-    var image_:ImageScrollView!
+class ImageGalleryCell: UICollectionViewCell {
+    var image_:ImageGalleryScrollView!
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        image_=ImageScrollView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+        image_=ImageGalleryScrollView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
         
         contentView.addSubview(image_)
         

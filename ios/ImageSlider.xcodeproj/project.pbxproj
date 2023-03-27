@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50E1C79129993707007F1020 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C79029993707007F1020 /* ImageSliderView.swift */; };
-		50E1C793299938F3007F1020 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C792299938F3007F1020 /* ImageCell.swift */; };
+		50E1C793299938F3007F1020 /* ImageGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C792299938F3007F1020 /* ImageGalleryCell.swift */; };
 		50E1C899299A23F4007F1020 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C898299A23F4007F1020 /* UIImageViewExtension.swift */; };
 		50E1C952299A3791007F1020 /* NSButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C915299A378E007F1020 /* NSButton+Kingfisher.swift */; };
 		50E1C953299A3791007F1020 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C916299A378E007F1020 /* ImageProcessor.swift */; };
@@ -71,7 +71,7 @@
 		50E1C98C299A3791007F1020 /* ImageBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C94F299A3791007F1020 /* ImageBinder.swift */; };
 		50E1C98D299A3791007F1020 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C950299A3791007F1020 /* Filter.swift */; };
 		50E1C98E299A3791007F1020 /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C951299A3791007F1020 /* SessionDataTask.swift */; };
-		50E1C991299A386F007F1020 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C990299A386F007F1020 /* ImageScrollView.swift */; };
+		50E1C991299A386F007F1020 /* ImageGalleryScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C990299A386F007F1020 /* ImageGalleryScrollView.swift */; };
 		F4FF95D7245B92E800C19C63 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* ImageSlider.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +90,7 @@
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libImageSlider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libImageSlider.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E1C79029993707007F1020 /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
-		50E1C792299938F3007F1020 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		50E1C792299938F3007F1020 /* ImageGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryCell.swift; sourceTree = "<group>"; };
 		50E1C898299A23F4007F1020 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		50E1C915299A378E007F1020 /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		50E1C916299A378E007F1020 /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		50E1C94F299A3791007F1020 /* ImageBinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBinder.swift; sourceTree = "<group>"; };
 		50E1C950299A3791007F1020 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		50E1C951299A3791007F1020 /* SessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataTask.swift; sourceTree = "<group>"; };
-		50E1C990299A386F007F1020 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		50E1C990299A386F007F1020 /* ImageGalleryScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryScrollView.swift; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* ImageSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSlider.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* ImageSlider-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageSlider-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
@@ -257,7 +257,7 @@
 		50E1C98F299A385A007F1020 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				50E1C990299A386F007F1020 /* ImageScrollView.swift */,
+				50E1C990299A386F007F1020 /* ImageGalleryScrollView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 				50E1C98F299A385A007F1020 /* CustomViews */,
 				50E1C89A299A2474007F1020 /* King */,
 				50E1C897299A23DC007F1020 /* Extensions */,
-				50E1C792299938F3007F1020 /* ImageCell.swift */,
+				50E1C792299938F3007F1020 /* ImageGalleryCell.swift */,
 				50E1C79029993707007F1020 /* ImageSliderView.swift */,
 				F4FF95D6245B92E800C19C63 /* ImageSlider.swift */,
 				B3E7B5891CC2AC0600A0062D /* ImageSlider.m */,
@@ -361,7 +361,7 @@
 				50E1C959299A3791007F1020 /* ImageProgressive.swift in Sources */,
 				50E1C96B299A3791007F1020 /* RedirectHandler.swift in Sources */,
 				50E1C95B299A3791007F1020 /* CallbackQueue.swift in Sources */,
-				50E1C991299A386F007F1020 /* ImageScrollView.swift in Sources */,
+				50E1C991299A386F007F1020 /* ImageGalleryScrollView.swift in Sources */,
 				50E1C962299A3791007F1020 /* ImageModifier.swift in Sources */,
 				50E1C982299A3791007F1020 /* NSTextAttachment+Kingfisher.swift in Sources */,
 				50E1C976299A3791007F1020 /* TVMonogramView+Kingfisher.swift in Sources */,
@@ -394,7 +394,7 @@
 				50E1C95A299A3791007F1020 /* CacheSerializer.swift in Sources */,
 				50E1C957299A3791007F1020 /* ImageDataProcessor.swift in Sources */,
 				50E1C956299A3791007F1020 /* ImageFormat.swift in Sources */,
-				50E1C793299938F3007F1020 /* ImageCell.swift in Sources */,
+				50E1C793299938F3007F1020 /* ImageGalleryCell.swift in Sources */,
 				50E1C984299A3791007F1020 /* FormatIndicatedCacheSerializer.swift in Sources */,
 				50E1C96C299A3791007F1020 /* ExtensionHelpers.swift in Sources */,
 				50E1C986299A3791007F1020 /* String+MD5.swift in Sources */,

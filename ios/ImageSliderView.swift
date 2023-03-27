@@ -40,7 +40,7 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
         layout.minimumLineSpacing = 0
         collection=UICollectionView(frame: rect, collectionViewLayout: layout)
         collection.backgroundColor = .clear
-        collection.register(ImageCell.self, forCellWithReuseIdentifier: "ImageCell")
+        collection.register(ImageGalleryCell.self, forCellWithReuseIdentifier: "ImageCell")
         collection.delegate = self
         collection.dataSource = self
         
@@ -75,7 +75,7 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageGalleryCell
         cell.image_.collection = collection
         cell.image_.display(url: list[indexPath.row] as String)
        

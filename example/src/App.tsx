@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import { Button, StyleSheet, View } from 'react-native';
-import { ImageSliderView } from 'image-slider';
+import { ImageSliderView } from 'mazadat-image-slider';
 
 export default function App() {
   const onItemSelected = event => {
