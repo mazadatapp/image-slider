@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		50E1C79129993707007F1020 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C79029993707007F1020 /* ImageSliderView.swift */; };
 		50E1C793299938F3007F1020 /* ImageGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C792299938F3007F1020 /* ImageGalleryCell.swift */; };
-		50E1C899299A23F4007F1020 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C898299A23F4007F1020 /* UIImageViewExtension.swift */; };
+		50E1C899299A23F4007F1020 /* UIImageViewSecondExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C898299A23F4007F1020 /* UIImageViewSecondExtension.swift */; };
 		50E1C952299A3791007F1020 /* NSButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C915299A378E007F1020 /* NSButton+Kingfisher.swift */; };
 		50E1C953299A3791007F1020 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C916299A378E007F1020 /* ImageProcessor.swift */; };
 		50E1C954299A3791007F1020 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1C917299A378E007F1020 /* KingfisherOptionsInfo.swift */; };
@@ -91,7 +91,7 @@
 		134814201AA4EA6300B7C361 /* libImageSlider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libImageSlider.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E1C79029993707007F1020 /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
 		50E1C792299938F3007F1020 /* ImageGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryCell.swift; sourceTree = "<group>"; };
-		50E1C898299A23F4007F1020 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		50E1C898299A23F4007F1020 /* UIImageViewSecondExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewSecondExtension.swift; sourceTree = "<group>"; };
 		50E1C915299A378E007F1020 /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		50E1C916299A378E007F1020 /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 		50E1C917299A378E007F1020 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 		50E1C897299A23DC007F1020 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				50E1C898299A23F4007F1020 /* UIImageViewExtension.swift */,
+				50E1C898299A23F4007F1020 /* UIImageViewSecondExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -366,7 +366,7 @@
 				50E1C982299A3791007F1020 /* NSTextAttachment+Kingfisher.swift in Sources */,
 				50E1C976299A3791007F1020 /* TVMonogramView+Kingfisher.swift in Sources */,
 				50E1C977299A3791007F1020 /* ImagePrefetcher.swift in Sources */,
-				50E1C899299A23F4007F1020 /* UIImageViewExtension.swift in Sources */,
+				50E1C899299A23F4007F1020 /* UIImageViewSecondExtension.swift in Sources */,
 				50E1C953299A3791007F1020 /* ImageProcessor.swift in Sources */,
 				50E1C979299A3791007F1020 /* UIButton+Kingfisher.swift in Sources */,
 				50E1C989299A3791007F1020 /* Storage.swift in Sources */,
