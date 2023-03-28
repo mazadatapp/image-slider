@@ -88,7 +88,11 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
     
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        sendEvent(index: collection.indexPathsForVisibleItems.first![1])
+        if(collection.indexPathsForVisibleItems.first != nil){
+            sendEvent(index: collection.indexPathsForVisibleItems.first![1])
+        }else{
+            sendEvent(index: 0)
+        }
     }
     
     func sendEvent(index:Int){
