@@ -13,7 +13,9 @@ import com.jsibbold.zoomage.ZoomageView;
 import com.squareup.picasso.Picasso;
 
 import java.util.LinkedList;
-
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.NetworkPolicy;
+import android.util.Log;
 public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.Holder>{
   LinkedList<String>list;
   Context context;
@@ -49,7 +51,9 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.Holder>{
     }
 
     public void onBind(String imageUrl){
-      Picasso.get().load(imageUrl).into(image);
+      Picasso.get().load(imageUrl).networkPolicy(NetworkPolicy.NO_CACHE)
+        .memoryPolicy(MemoryPolicy.NO_CACHE).into(image);
+      Log.i("datadata",imageUrl);
     }
   }
 }
