@@ -197,7 +197,9 @@ open class ImageGalleryScrollView: UIScrollView {
       
       let zoomView = UIImageView()
       zoomView.kf.setImage(with: URL(string: url),completionHandler: { [self] Result in
-        display(image: zoomView.image!)
+          if(zoomView.image != nil){
+              display(image: zoomView.image!)
+          }
       })
       
       
