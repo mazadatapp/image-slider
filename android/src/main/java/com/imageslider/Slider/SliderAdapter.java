@@ -13,14 +13,12 @@ import com.jsibbold.zoomage.ZoomageView;
 import com.squareup.picasso.Picasso;
 
 import java.util.LinkedList;
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.NetworkPolicy;
-import android.util.Log;
-public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.Holder>{
-  LinkedList<String>list;
+
+public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.Holder> {
+  LinkedList<String> list;
   Context context;
 
-  public SliderAdapter(Context context,LinkedList<String> list) {
+  public SliderAdapter(Context context, LinkedList<String> list) {
     this.list = list;
     this.context = context;
   }
@@ -28,7 +26,7 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.Holder>{
   @NonNull
   @Override
   public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    View view=LayoutInflater.from(context).inflate(R.layout.adapter_image_slider_item,parent,false);
+    View view = LayoutInflater.from(context).inflate(R.layout.adapter_image_slider_item, parent, false);
     return new Holder(view);
   }
 
@@ -42,18 +40,17 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.Holder>{
     return list.size();
   }
 
-  class Holder extends RecyclerView.ViewHolder{
+  class Holder extends RecyclerView.ViewHolder {
     ZoomageView image;
+
     public Holder(@NonNull View itemView) {
       super(itemView);
-      image=itemView.findViewById(R.id.image);
+      image = itemView.findViewById(R.id.image);
 
     }
 
-    public void onBind(String imageUrl){
-      Picasso.get().load(imageUrl).networkPolicy(NetworkPolicy.NO_CACHE)
-        .memoryPolicy(MemoryPolicy.NO_CACHE).into(image);
-      Log.i("datadata",imageUrl);
+    public void onBind(String imageUrl) {
+      Picasso.get().load(imageUrl).into(image);
     }
   }
 }
