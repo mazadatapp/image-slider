@@ -1,6 +1,7 @@
 package com.imageslider.Slider;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import com.imageslider.R;
 import com.jsibbold.zoomage.ZoomageView;
 import com.squareup.picasso.Picasso;
 
+import java.io.File;
 import java.util.LinkedList;
 
 public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.Holder> {
@@ -50,7 +52,11 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.Holder> {
     }
 
     public void onBind(String imageUrl) {
-      Picasso.get().load(imageUrl).into(image);
+      if (imageUrl.contains("https://") || imageUrl.contains("http://")) {
+        Picasso.get().load(imageUrl).into(image);
+      } else {
+        image.setImageURI(Uri.fromFile(new File(imageUrl)));
+      }
     }
   }
 }
