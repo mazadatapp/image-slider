@@ -77,7 +77,12 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageGalleryCell
         cell.image_.collection = collection
-        cell.image_.display(url: list[indexPath.row] as String)
+        let imageUrl=list[indexPath.row] as String
+        if(imageUrl.contains("https://") || imageUrl.contains("http://")){
+            cell.image_.display(url: imageUrl)
+        }else{
+            cell.image_.display(image: UIImage(contentsOfFile: imageUrl)!)
+        }
        
         return cell
     }
