@@ -83,7 +83,7 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
         }else{
             cell.image_.display(image: UIImage(contentsOfFile: imageUrl)!)
         }
-       
+        
         return cell
     }
     
@@ -93,19 +93,18 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
     
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        OperationQueue.main.addOperation({ [self] in
-            if(collection.indexPathsForVisibleItems.first != nil){
-                sendEvent(index: collection.indexPathsForVisibleItems.first![1])
-            }else{
-                sendEvent(index: 0)
-            }
-        })
-        
+        if(collection.indexPathsForVisibleItems.first != nil){
+            sendEvent(index: collection.indexPathsForVisibleItems.first![1])
+        }else{
+            sendEvent(index: 0)
+        }
         
     }
     
     func sendEvent(index:Int){
-        let event = ["data":index]
-        onChange!(event)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5){ [self] in
+            let event = ["data":index]
+            onChange!(event)
+        }
     }
 }
