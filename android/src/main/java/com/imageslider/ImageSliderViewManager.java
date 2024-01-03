@@ -25,7 +25,7 @@ public class ImageSliderViewManager extends SimpleViewManager<RecyclerView> {
   public static final String REACT_CLASS = "ImageSliderView";
   private SliderAdapter adapter;
   private LinkedList<String> images = new LinkedList<>();
-  private ThemedReactContext reactContext
+  private ThemedReactContext reactContext;
   @Override
   @NonNull
   public String getName() {
