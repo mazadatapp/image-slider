@@ -25,7 +25,7 @@ public class ImageSliderViewManager extends SimpleViewManager<RecyclerView> {
   public static final String REACT_CLASS = "ImageSliderView";
   private SliderAdapter adapter;
   private LinkedList<String> images = new LinkedList<>();
-
+  private ThemedReactContext reactContext
   @Override
   @NonNull
   public String getName() {
@@ -35,6 +35,7 @@ public class ImageSliderViewManager extends SimpleViewManager<RecyclerView> {
   @Override
   @NonNull
   public RecyclerView createViewInstance(ThemedReactContext reactContext) {
+    this.reactContext=reactContext;
     RecyclerView recyclerView = new RecyclerView(reactContext);
     images = new LinkedList<>();
     adapter = new SliderAdapter(reactContext, images);
@@ -75,7 +76,11 @@ public class ImageSliderViewManager extends SimpleViewManager<RecyclerView> {
     for (int i = 0; i < data.size(); i++) {
       images.addLast(data.getString(i));
     }
-    adapter.notifyDataSetChanged();
+    LinearLayoutManager manager = new LinearLayoutManager(reactContext, RecyclerView.HORIZONTAL, false);
+    recyclerView.setLayoutManager(manager);
+    adapter = new SliderAdapter(reactContext, images);
+    recyclerView.setAdapter(adapter);
+    recyclerView.scrollBy(1,0);
   }
 
   @Override
