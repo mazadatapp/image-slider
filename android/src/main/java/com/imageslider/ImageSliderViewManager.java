@@ -8,14 +8,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReadableArray;
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.common.MapBuilder;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
-import com.facebook.react.common.MapBuilder;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
-import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.WritableMap;
 import com.imageslider.Slider.SliderAdapter;
 
 import java.util.LinkedList;
@@ -23,9 +23,11 @@ import java.util.Map;
 
 public class ImageSliderViewManager extends SimpleViewManager<RecyclerView> {
   public static final String REACT_CLASS = "ImageSliderView";
+  LinearLayoutManager manager;
   private SliderAdapter adapter;
   private LinkedList<String> images = new LinkedList<>();
   private ThemedReactContext reactContext;
+
   @Override
   @NonNull
   public String getName() {
@@ -35,12 +37,12 @@ public class ImageSliderViewManager extends SimpleViewManager<RecyclerView> {
   @Override
   @NonNull
   public RecyclerView createViewInstance(ThemedReactContext reactContext) {
-    this.reactContext=reactContext;
+    this.reactContext = reactContext;
     RecyclerView recyclerView = new RecyclerView(reactContext);
     images = new LinkedList<>();
     adapter = new SliderAdapter(reactContext, images);
 
-    LinearLayoutManager manager = new LinearLayoutManager(reactContext, RecyclerView.HORIZONTAL, false);
+    manager = new LinearLayoutManager(reactContext, RecyclerView.HORIZONTAL, false);
     recyclerView.setLayoutManager(manager);
     LinearSnapHelper helper = new LinearSnapHelper();
     helper.attachToRecyclerView(recyclerView);
@@ -50,14 +52,17 @@ public class ImageSliderViewManager extends SimpleViewManager<RecyclerView> {
       @Override
       public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
         super.onScrolled(recyclerView, dx, dy);
-        int position=manager.findFirstCompletelyVisibleItemPosition();
-        if (position != -1){
-          WritableMap event = Arguments.createMap();
-          event.putInt("data", position);
-          reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
-            recyclerView.getId(),
-            "topChange",
-            event);
+        int offset = recyclerView.computeHorizontalScrollOffset();
+        if (offset % recyclerView.getWidth() == 0) {
+          int position = offset / recyclerView.getWidth();
+          if (position != -1) {
+            WritableMap event = Arguments.createMap();
+            event.putInt("data", position);
+            reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
+              recyclerView.getId(),
+              "topChange",
+              event);
+          }
         }
       }
     });
@@ -80,7 +85,7 @@ public class ImageSliderViewManager extends SimpleViewManager<RecyclerView> {
     recyclerView.setLayoutManager(manager);
     adapter = new SliderAdapter(reactContext, images);
     recyclerView.setAdapter(adapter);
-    recyclerView.scrollBy(1,0);
+    recyclerView.scrollBy(1, 0);
   }
 
   @Override
