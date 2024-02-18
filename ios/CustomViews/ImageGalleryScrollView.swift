@@ -15,6 +15,7 @@ import UIKit
 
 open class ImageGalleryScrollView: UIScrollView {
     var collection:UICollectionView!
+    var imageSliderView:ImageSliderView!
     @objc public enum ScaleMode: Int {
         case aspectFill
         case aspectFit
@@ -35,7 +36,6 @@ open class ImageGalleryScrollView: UIScrollView {
     @objc public private(set) var zoomView: UIImageView? = nil
     
     @objc open weak var imageScrollViewDelegate: ImageScrollViewDelegate?
-
     var imageSize: CGSize = CGSize.zero
     private var pointToCenterAfterResize: CGPoint = CGPoint.zero
     private var scaleToRestoreAfterResize: CGFloat = 1.0
@@ -342,6 +342,7 @@ extension ImageGalleryScrollView: UIScrollViewDelegate {
     }
     
     public func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        print(zoomScale)
         imageScrollViewDelegate?.scrollViewDidEndZooming?(scrollView, with: view, atScale: scale)
     }
     
@@ -360,7 +361,7 @@ extension ImageGalleryScrollView: UIScrollViewDelegate {
     public func scrollViewDidZoom(_ scrollView: UIScrollView) {
         adjustFrameToCenter()
         imageScrollViewDelegate?.scrollViewDidZoom?(scrollView)
-        collection.isScrollEnabled = (zoomScale<0.5)
+        collection.isScrollEnabled = (zoomScale<0.5) || imageSliderView.isScrolling
         
     }
     

@@ -14,6 +14,7 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
     
     var list=[NSString]()
     var collection:UICollectionView!
+    var isScrolling=false
     @objc var color: String = "" {
         didSet {
             print(data.count)
@@ -77,6 +78,7 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageGalleryCell
         cell.image_.collection = collection
+        cell.image_.imageSliderView = self
         let imageUrl=list[indexPath.row] as String
         if(imageUrl.contains("https://") || imageUrl.contains("http://")){
             cell.image_.display(url: imageUrl)
@@ -106,5 +108,12 @@ class ImageSliderView : UIView,UICollectionViewDelegate,UICollectionViewDataSour
             let event = ["data":index]
             onChange!(event)
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        isScrolling=true
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        isScrolling=false
     }
 }
