@@ -267,10 +267,14 @@ open class ImageGalleryScrollView: UIScrollView {
         // zoom out if it bigger than the scale factor after double-tap scaling. Else, zoom in
         if zoomScale >= minimumZoomScale * ImageGalleryScrollView.kZoomInFactorFromMinWhenDoubleTap - 0.01 {
             setZoomScale(minimumZoomScale, animated: true)
+            imageSliderView.isScrolling=true
+            collection.isScrollEnabled = true
         } else {
             let center = gestureRecognizer.location(in: gestureRecognizer.view)
             let zoomRect = zoomRectForScale(ImageGalleryScrollView.kZoomInFactorFromMinWhenDoubleTap * minimumZoomScale, center: center)
             zoom(to: zoomRect, animated: true)
+            imageSliderView.isScrolling=false
+            collection.isScrollEnabled = false
         }
     }
     
@@ -360,6 +364,7 @@ extension ImageGalleryScrollView: UIScrollViewDelegate {
     public func scrollViewDidZoom(_ scrollView: UIScrollView) {
         adjustFrameToCenter()
         imageScrollViewDelegate?.scrollViewDidZoom?(scrollView)
+        
         collection.isScrollEnabled = (zoomScale<0.5) || imageSliderView.isScrolling
         
     }
