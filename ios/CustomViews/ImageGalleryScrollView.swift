@@ -342,7 +342,6 @@ extension ImageGalleryScrollView: UIScrollViewDelegate {
     }
     
     public func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
-        print(zoomScale)
         imageScrollViewDelegate?.scrollViewDidEndZooming?(scrollView, with: view, atScale: scale)
     }
     
