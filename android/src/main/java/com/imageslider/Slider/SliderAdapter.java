@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.imageslider.R;
 import com.jsibbold.zoomage.ZoomageView;
-import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.util.LinkedList;
@@ -53,9 +53,9 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.Holder> {
 
     public void onBind(String imageUrl) {
       if (imageUrl.contains("https://") || imageUrl.contains("http://")) {
-        Picasso.get().load(imageUrl).into(image);
+        Glide.with(context).load(imageUrl).into(image);
       } else {
-        image.setImageURI(Uri.fromFile(new File(imageUrl)));
+        Glide.with(context).load(new File(imageUrl)).into(image);
       }
     }
   }
